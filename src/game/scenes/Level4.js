@@ -650,7 +650,7 @@ export default class Level4 extends BaseScene {
                     this.boss.attackCooldown = false;
                     this.boss.anims.play('boss_idle', true);
                     // idle 상태로 돌아갈 때 히트박스 위치 원복
-                    this.boss.body.setOffset(-20, 0);
+                    this.boss.body.setOffset(0, 0);
                 }
             });
             return;
@@ -678,7 +678,7 @@ export default class Level4 extends BaseScene {
                 this.boss.flipX = velocityX < 0;
                 this.boss.anims.play('boss_walk', true);
                 // walk 상태일 때도 기본 히트박스 위치 유지
-                this.boss.body.setOffset(-20, 0);
+                this.boss.body.setOffset(0, 0);
 
                 // 보스 걷기 먼지 효과와 걸음 소리
                 if (this.boss.body.onFloor()) {
